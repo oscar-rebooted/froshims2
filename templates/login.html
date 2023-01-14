@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="main">
+    <form class="form" name="Login form" action="/login" method="POST">
+      <div class="form__line">
+        <div class="form__title">Access your account</div>
+      </div>
+      <div class="form__line">
+        <div class="formfield">
+          <div class="formfield__title">Username</div>
+          <input class="formfield__input" name="username" required></input>
+        </div>
+      </div>
+      <div class="form__line">
+        <div class="formfield">
+          <div class="formfield__title">Password</div>
+          <input class="formfield__input" name="password" required></input>
+        </div>
+      </div>
+      <div class="form__line">
+        <div class="form__line2">
+          <button type="submit" name="login_button" class="button">Log-in</button>
+        </div>
+      </div>
+      <div class="form__line">
+        Don't have an account?&nbsp<a href="{{ create_account_link }}" class="link">Sign up</a>
+      </div>
+      {% for message in get_flashed_messages() %}
+        <div class="form__line">
+            <p class="error_message">{{ message }}</p>
+        </div> 
+      {% endfor %}
+    </form>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,230 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+.main {
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    padding-bottom: 50px;
+    flex-direction: column;
+    font-size: 16px;
+    color: #666;
+    font-weight: 400;
+}
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    background-color: #fff;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px 0 10px 20px;
+    border-bottom: 2px solid rgba(102, 102, 102, 0.25);
+}
+.button--small {
+    width: auto;
+    border-radius: 10px;
+    background-color: #111;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.div-3 {
+    font-style: italic;
+    align-self: center;
+}
+.form {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+}
+.form__title {
+    color: #333;
+    text-align: left;
+    width: 100%;
+    margin-top: 72px;
+    font: 600 32px Inter, sans-serif;
+}
+@media (max-width: 991px) {
+    .div-5 {
+    max-width: 100%;
+    margin-top: 40px;
+    }
+}
+.form__line {
+    display: flex;
+    column-gap: 5%;
+    margin-top: 16px;
+    width: 100%;
+    justify-content: center;
+}
+@media (max-width: 991px) {
+    .div-6 {
+    flex-wrap: wrap;
+    }
+}
+.formfield {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0%;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10px;
+}
+
+    .formfield__input {
+        border-radius: 12px;
+        border: 1px solid rgba(102, 102, 102, 0.35);
+        margin-top: 13px;
+        height: 42px;
+        font-size: 16px;
+        color: #666;
+        padding: 0 12px;
+        font-family: 'Inter', sans-serif;
+        width: 100%;
+    }
+.form__line2 {
+    padding: 0px 80px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 4em;
+}
+.button {
+    border-radius: 32px;
+    background-color: #111;
+    color: #fff;
+    font: 500 22px Inter, sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+.div-18 {
+    color: #111;
+    font-family: Inter, sans-serif;
+    text-decoration-line: underline;
+    margin-top: 26px;
+    white-space: nowrap;
+}
+.link {
+    font-weight: 500; 
+    color: rgba(17, 17, 17, 1); 
+    text-decoration-line: underline
+}
+.error_message {
+    font-size: 16px;
+    color: #D32424;
+    font-weight: 400;
+}
+
+
+#register_sports_main {
+    display: flex;
+    padding: 57px 100px;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    flex: 1 0 0;
+    align-self: stretch;
+    font-family: Inter;
+}
+#table_head {
+    display: flex;
+    padding: 8px 20px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+}
+#table_head_text {
+    color: #908787;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.table {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+.sport_box {
+    /* Box */
+    display: flex;
+    padding: 40px 60px 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    border-radius: 30px;
+    /* Text */
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+
+}
+.sport_box--green {
+    border: 3px solid #0FA958;
+    color: #0FA958;
+}
+.sport_box--grey {
+    border: 3px solid #908787;
+    color: #908787;
+}
+
+
+#admin_dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+}
+#new_admin__container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+}
+#new_admin__textbox {
+    font-family: 'Inter', sans-serif;
+    color: #666;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid rgba(102, 102, 102, 0.35);
+    border-radius: 6px;
+    width: 100%;
+}
+#new_admin__button {
+    width: auto;
+    border-radius: 10px;
+    background-color: #111;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    padding: 10px 20px;
+    cursor: hover;
+}

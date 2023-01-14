@@ -1,0 +1,18 @@
+<div class="sports-container">
+    {% for sport in sports %}
+        <div class="sport-box not-registered" data-sport="{{ sport.name }}">
+            <div class="icon">{{ sport.icon }}</div>
+            <div class="register-prompt">
+                <button class="register-btn">Register</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+            <div class="deregister-prompt">
+                <button class="deregister-btn">De-register</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<!-- Link the JavaScript file for interactivity -->
+<script src="{{ url_for('static', filename='js/register_sports.js') }}"></script>

@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div id="admin_dashboard">
+<table id="admin_dashboard__table">
+    <thead>
+      <tr>
+        <th>Student ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Sport</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for registration in registrations %}
+      <tr>
+        <td>{{ registration.student_id }}</td>
+        <td>{{ registration.firstName }}</td>
+        <td>{{ registration.lastName }}</td>
+        <td>{{ registration.sport }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <!-- <form id="new_admin__container" action="{{ url_for('make_admin') }}" method="post">
+    <input type="text" id="new_admin__textbox" placeholder="Type username" required>
+    <button id="new_admin__button">Make into admin</button>
+    <div id="successMessage" style="display: none; color: green;">Success: user now admin</div>
+  </form> -->
+</div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="main">
+    <form class="form" name="Create account form" action="/create_account" method="POST">
+      <div class="form__line">
+        <div class="form__title">Create an account</div>
+      </div>
+      <div class="form__line">
+        <div class="formfield">
+          <div class="formfield__title">First name</div>
+          <input class="formfield__input" name="firstName" required></input>
+        </div>
+        <div class="formfield">
+          <div class="formfield__title">Last name</div>
+          <input class="formfield__input" name="lastName" required></input>
+        </div>
+      </div>
+      <div class="form__line">
+        <div class="formfield">
+          <div class="formfield__title">Username</div>
+          <input class="formfield__input" name="username" required></input>
+        </div>
+      </div>
+      <div class="form__line">
+        <div class="formfield">
+          <div class="formfield__title">Password</div>
+          <input class="formfield__input" name="password" required></input>
+        </div>
+      </div>
+      <div class="form__line">
+        <div class="form__line2">
+          <button type="submit" name="create_account_button" class="button">Sign up</button>
+        </div>
+      </div>
+      <div class="form__line">
+        Already have an account?&nbsp<a href="{{ login_link }}" class="link">Log-in</a>
+      </div>
+    </form>
+  </div>
+
+{% endblock %}

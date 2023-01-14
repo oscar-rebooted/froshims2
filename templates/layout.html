@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1,  width=device-width">
+        <title>froshims2</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="banner">
+            <div class="div-3">Froshims2</div>
+            {% if logged_in %}
+            <form action="/logout" method="get" style="display: inline-block">
+                <button name="Logout" class="button--small" type="submit">Logout</button>
+            </form>
+            {% endif %}
+          </div>
+
+        {% block body %}{% endblock %}
+    </body>
+</html>

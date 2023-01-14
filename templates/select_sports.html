@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div id="register_sports_main">
+    <div id="table_head">
+        <p id="table_head_text">Select sports to register for</p>
+    </div>
+        <div class="table">
+            {% for sport in sports %}
+            <div class="sport_box" data-sport-name="{{ sport }}" data-sport-colour="grey">
+                <img height="102px" width="102px">
+                <p>{{ sport }}</p>
+            </div>
+            {% endfor %}
+            <div class="sport_box" data-sport-name="Tennis" data-sport-colour="grey">
+                <img height="102px" width="102px">
+                <p>Tennis</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/select_sports.js') }}"></script>
+
+{% endblock %}
