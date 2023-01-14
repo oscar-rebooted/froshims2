@@ -106,26 +106,26 @@ def admin():
     print(registrations)
     return render_template('admin_dashboard.html', registrations=registrations)
 
-@app.route('/make_admin', methods=["POST"])
-def make_admin():
-    username = session.get('username')
-    user = Users.query.filter_by(username=username).first()
-    if not user.admin or not user:
-        return redirect(url_for('login'))
+# @app.route('/make_admin', methods=["POST"])
+# def make_admin():
+#     username = session.get('username')
+#     user = Users.query.filter_by(username=username).first()
+#     if not user.admin or not user:
+#         return redirect(url_for('login'))
     
-    data = request.get_json()
-    new_admin_username = data.get('new_admin_username')
-    if not new_admin_username:
-        return jsonify({'success': False, 'message': 'Bad request'}), 400
+#     data = request.get_json()
+#     new_admin_username = data.get('new_admin_username')
+#     if not new_admin_username:
+#         return jsonify({'success': False, 'message': 'Bad request'}), 400
 
-    new_admin = Users.query.filter_by(username=new_admin_username).first()
-    if not new_admin:
-        return jsonify({'success': False, 'message': 'User does not exist'}), 404
+#     new_admin = Users.query.filter_by(username=new_admin_username).first()
+#     if not new_admin:
+#         return jsonify({'success': False, 'message': 'User does not exist'}), 404
 
-    new_admin.admin = True
-    db.session.commit()
+#     new_admin.admin = True
+#     db.session.commit()
 
-    return jsonify({'success': True, 'message': f'{new_admin_username} is now admin'})
+#     return jsonify({'success': True, 'message': f'{new_admin_username} is now admin'})
 
 @app.route('/login', methods=["GET", "POST"])
 def login():
@@ -152,6 +152,9 @@ def logout():
 
 @app.route('/select_sports')
 def select_sports():
+    username = session.get('username')
+    if not username:
+        return redirect(url_for('login'))
     return render_template("select_sports.html", sports=sports_list)
 
 @app.route('/get_sport_icon/<sport>/<colour>')
