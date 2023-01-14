@@ -3,10 +3,18 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy import text, delete
 from werkzeug.security import generate_password_hash, check_password_hash
+import os
+from dotenv import load_dotenv
+
 
 # Configurations
 app = Flask(__name__)
-app.config.from_object('config')
+load_dotenv() 
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['DEBUG'] = os.getenv('DEBUG', 'false') == 'true' #To convert from string to boolean
+
 db = SQLAlchemy(app)
 
 # Set up database models

@@ -4,3 +4,4 @@ misc/
  __pycache__/
 *.pyc
 config.py
+*.env
